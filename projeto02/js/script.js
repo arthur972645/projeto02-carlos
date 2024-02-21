@@ -27,7 +27,16 @@ function redenrizarPersonagem(items){
             </div>
         `;
 
+        divPersonagem.addEventListener( 'click',() => {
+            detalhePersonagem(item, index)
+        })
         divPersonagem.classList.add('personagem')
         container.appendChild(divPersonagem)
+        console.log(index)
     });
+}
+
+function detalhePersonagem(item, index){
+    console.log(index)
+    window.location.href = `../pages/person.html?index=${index}`
 }
